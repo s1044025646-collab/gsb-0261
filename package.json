@@ -1,0 +1,20 @@
+{
+  "name": "pinyin-tone-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "拼音声调标记转换与音节诊断后端（API + CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/*.test.js\"",
+    "start": "node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/demo.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
